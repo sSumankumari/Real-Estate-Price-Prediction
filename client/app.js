@@ -26,28 +26,30 @@ function onClickedEstimatePrice() {
     var location = document.getElementById("uiLocations");
     var estPrice = document.getElementById("uiEstimatedPrice");
 
-    var url = "http://127.0.0.1:5000/predict_home_price"; //Use this if you are NOT using nginx which is first 7 tutorials
-    // var url = "/api/predict_home_price"; // Use this if  you are using nginx. i.e tutorial 8 and onwards
-
+    var url = "http://127.0.0.1:5000/predict_home_price";
+    // var url = "/api/predict_home_price"; 
     $.post(url, {
         total_sqft: parseFloat(sqft.value),
         bhk: bhk,
         bath: bathrooms,
         location: location.value
-    }, function (data, status) {
+    })
+    .done(function (data) {
         console.log(data.estimated_price);
-        estPrice.innerHTML = "<h2>" + data.estimated_price.toString() + " Lakh</h2>";
-        console.log(status);
+        estPrice.innerHTML = "<h2>Estimated Price: " + data.estimated_price.toString() + " Lakh</h2>";
+    })
+    .fail(function (error) {
+        console.error('Error:', error);
     });
 }
 
 function onPageLoad() {
     console.log("document loaded");
-    var url = "http://127.0.0.1:5000/get_location_names"; // Use this if you are NOT using nginx which is first 7 tutorials
-    // var url = "/api/get_location_names"; // Use this if  you are using nginx. i.e tutorial 8 and onwards
+    var url = "http://127.0.0.1:5000/get_location_names";
+    // var url = "/api/get_location_names";
     $.get(url, function (data, status) {
         console.log("got response for get_location_names request");
-        if (data) {
+        if (data && data.locations) {
             var locations = data.locations;
             var uiLocations = document.getElementById("uiLocations");
             $('#uiLocations').empty();

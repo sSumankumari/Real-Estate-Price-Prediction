@@ -17,7 +17,9 @@ def get_location_names():
         return jsonify({'error': str(e)})
 
 # Route to predict home price
-@app.route('/predict_home_price', methods=['POST'])
+# @app.route('/predict_home_price', methods=['POST'])
+@app.route('/predict_home_price')
+
 def predict_home_price():
     try:
         # Parse input parameters from the POST request
@@ -43,5 +45,6 @@ if __name__ == "__main__":
         # Load artifacts before starting the server
         util.load_saved_artifacts()
         app.run()
+
     except Exception as e:
         print('Error starting the Flask server:', str(e))
