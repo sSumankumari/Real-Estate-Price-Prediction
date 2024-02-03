@@ -37,7 +37,7 @@ def load_saved_artifacts():
 
     with open(columns_path, "r") as f:
         __data_columns = json.load(f)['data_columns']
-        __locations = list(set(__data_columns[3:]))  # Extract unique locations from columns (skip first 3 columns)
+        __locations = list(__data_columns[3:])  # Extract unique locations from columns (skip first 3 columns)
 
     global __model
     if __model is None:
