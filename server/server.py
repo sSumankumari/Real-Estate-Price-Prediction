@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import util
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 # Route to get location names
 @app.route('/get_location_names')

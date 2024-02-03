@@ -130,17 +130,29 @@ h2 {
     border-radius: 5px;
     cursor: pointer;
 }
+
 .submit:hover {
-    background:rgba(166, 173, 232, 0.3);
+    background-position: right center;
+    color: #fff;
+    box-shadow: 0px 15px 20px #09097949;
+    text-decoration: none;
 }
 
 .result {
     background: #dcd686;
     width: 76%;
     border: 0;
+    border-radius: 10px;
     margin: 25px 0 10px;
     box-sizing: border-box;
     font-size: 15px;
-    height: 35px;
+    height: 80px;
     text-align: center;
+    align-items: center;
+}
+
+.result h2 {
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
 }
