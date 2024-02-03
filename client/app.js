@@ -20,6 +20,8 @@ function getBHKValue() {
 
 function onClickedEstimatePrice() {
     console.log("Estimate price button clicked");
+
+    // Get input values
     var sqft = document.getElementById("uiSqft");
     var bhk = getBHKValue();
     var bathrooms = getBathValue();
@@ -42,6 +44,11 @@ function onClickedEstimatePrice() {
         console.error('Error:', error);
     });
 }
+
+$("#btnSubmit").click(function () {
+    $("#resultDiv").show();
+    $("#loadingGif").hide();
+});
 
 function onPageLoad() {
     console.log("document loaded");

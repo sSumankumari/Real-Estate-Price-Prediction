@@ -18,7 +18,7 @@ def get_location_names():
 
 # Route to predict home price
 # @app.route('/predict_home_price', methods=['POST'])
-@app.route('/predict_home_price')
+@app.route('/predict_home_price', methods=['POST'])
 
 def predict_home_price():
     try:
