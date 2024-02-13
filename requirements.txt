@@ -1,8 +1,8 @@
-Flask
+Flask==2.1.5
+gunicorn==20.1.0
+
 
 numpy
 scikit-learn
 matplotlib
 pandas
-
-gunicorn==20.1.0
