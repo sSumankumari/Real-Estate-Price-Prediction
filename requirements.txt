@@ -1,0 +1,8 @@
+Flask
+
+numpy
+scikit-learn
+matplotlib
+pandas
+
+gunicorn==20.1.0
