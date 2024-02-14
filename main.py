@@ -7,6 +7,12 @@ import os
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
+# Route to render the HTML templates
+@app.route('/')
+def home():
+    template_path = os.path.join('app.html')
+    return render_template(template_path)
+
 # Serve static files (CSS and JavaScript)
 @app.route('/static/app.css')
 def serve_css():
@@ -15,12 +21,6 @@ def serve_css():
 @app.route('/static/app.js')
 def serve_js():
     return send_from_directory(os.path.join(os.path.dirname(__file__), 'static'), 'app.js')
-
-# Route to render the HTML templates
-@app.route('/')
-def home():
-    template_path = os.path.join('app.html')
-    return render_template(template_path)
 
 
 # Route to get location names
