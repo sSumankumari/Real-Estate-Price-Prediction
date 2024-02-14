@@ -1,9 +1,27 @@
-from flask import Flask, request, jsonify
+from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
+from flask.helpers import send_from_directory
 from server import util
+import os
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
+
+# Serve static files (CSS and JavaScript)
+@app.route('/static/app.css')
+def serve_css():
+    return send_from_directory(os.path.join(os.path.dirname(__file__), 'static'), 'app.css')
+
+@app.route('/static/app.js')
+def serve_js():
+    return send_from_directory(os.path.join(os.path.dirname(__file__), 'static'), 'app.js')
+
+# Route to render the HTML templates
+@app.route('/')
+def home():
+    template_path = os.path.join('app.html')
+    return render_template(template_path)
+
 
 # Route to get location names
 @app.route('/get_location_names')
