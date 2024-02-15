@@ -7,6 +7,8 @@ import os
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
+util.load_saved_artifacts()
+
 # Route to render the HTML templates
 @app.route('/')
 def home():
@@ -63,7 +65,7 @@ if __name__ == "__main__":
     try:
         print('Starting Python Flask Server for Bangalore Home Price Prediction...')
         # Load artifacts before starting the server
-        util.load_saved_artifacts()
+        # util.load_saved_artifacts()
         app.run()
 
     except Exception as e:
