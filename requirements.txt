@@ -2,7 +2,7 @@ Flask==3.0.2
 Werkzeug
 gunicorn
 flask_cors
-Python [all]
+Python
 
 numpy
 scikit-learn
