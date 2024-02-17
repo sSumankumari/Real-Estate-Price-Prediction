@@ -24,5 +24,3 @@ Dive into the world of intelligent real estate decisions with our Bangalore Home
 Empowering you with a tool that fuses web development artistry and machine learning science. 🚀
 
 *Explore. Predict. Invest. Elevate Your Real Estate Game.* 🌟
-
-[![Try it Now!](insert_button_image_url)](https://homepriceprediction-9rub.onrender.com/)
