@@ -10,11 +10,6 @@ html {
     background-repeat: no-repeat;
     background-size: auto;
     background-size: 100% 100%;
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
     position: fixed;
     width: 100%;
     height: 100%;
@@ -27,49 +22,36 @@ h1 {
     font-size: 44px;
     margin: 20px;
     text-align: center;
-    text-shadow: #c2cfa2 3px 3px;
+    text-shadow: rgb(204, 214, 228) 3px 3px;
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 8px;
+    font-weight: 100%;
+    /* text-shadow: 2px  2px #7f7f7f; */
 }
 
 .switch-field {
     display: flex;
+    width: 90%;
+    border-radius: 10px;
     margin-bottom: 36px;
     overflow: hidden;
+    background: #04437aa7;
+    color: #fff;
 }
 
-.switch-field input {
-    position: absolute !important;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    width: 1px;
-    border: 0;
-    overflow: hidden;
+.switch-field input{
+    margin-left: 20px;
 }
-
-.switch-field label {
-    background-color: #e4e4e4;
-    color: rgba(0, 0, 0, 0.6);
-    font-size: 14px;
-    line-height: 1;
-    text-align: center;
-    padding: 8px 16px;
-    margin-right: -1px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
-    transition: all 0.1s ease-in-out;
+.switch-field label{
+    color: white;
+    font-size: 20px;
 }
 
 .switch-field label:hover {
     cursor: pointer;
-}
-
-.switch-field input:checked+label {
-    background-color: #a5dc86;
-    box-shadow: none;
 }
 
 .switch-field label:first-of-type {
@@ -93,67 +75,75 @@ h2 {
 .area {
     font-family: "Roboto", sans-serif;
     outline: 0;
-    background: #f2f2f2;
-    width: 76%;
+    background: #04437aa7;
+    color: #fff;
+    width: 90%;
     border: 0;
     margin: 0 0 10px;
     padding: 10px;
     box-sizing: border-box;
     font-size: 15px;
     height: 35px;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+
+input[type="text" i] {
+    padding-block: 1px;
+    padding-inline: 2px;
+    background: #04437aa7;
+    color: #fff;
 }
 
 .location {
     font-family: "Roboto", sans-serif;
     outline: 0;
-    background: #f2f2f2;
-    width: 76%;
+    background: #04437aa7;
+    color: #fff;
+    width: 90%;
     border: 0;
     margin: 0 0 10px;
     padding: 10px;
     box-sizing: border-box;
     font-size: 15px;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .submit {
-    background: #a5dc86;
-    width: 76%;
+    background: #04437aa7;
+    color: #fff;
+    width: 90%;
     border: 0;
     margin: 25px 0 10px;
     box-sizing: border-box;
     font-size: 15px;
     height: 35px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
 .submit:hover {
     background-position: right center;
-    color: #fff;
     box-shadow: 0px 15px 20px #09097949;
     text-decoration: none;
 }
 
 .result {
-    background: #dcd686;
-    width: 76%;
+    background: #04437aa7;
+    width: 90%;
     border: 0;
     border-radius: 10px;
     margin: 25px 0 10px;
     box-sizing: border-box;
-    font-size: 15px;
     height: 80px;
-    text-align: center;
     align-items: center;
     align-self: center;
 }
 
-.result h2 {
+#uiEstimatedPrice h2{
     font-size: 17px;
+    color: white;
     text-align: center;
-    margin: 0;
+    margin: 10px;
 }
