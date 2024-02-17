@@ -25,6 +25,4 @@ Empowering you with a tool that fuses web development artistry and machine learn
 
 *Explore. Predict. Invest. Elevate Your Real Estate Game.* 🌟
 
-![Prediction Gif](url_to_gif)
-
 [![Try it Now!](insert_button_image_url)](https://homepriceprediction-9rub.onrender.com/)
