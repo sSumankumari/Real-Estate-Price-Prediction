@@ -4,7 +4,9 @@
 
 Dive into the world of intelligent real estate decisions with our Bangalore Home Price Prediction model. This Machine Learning marvel forecasts home prices, considering area (in sqft), BHK, bathrooms, and location.
 
-🌐 **Web App:** Experience it [here](https://homepriceprediction-9rub.onrender.com/)
+🌐 **Web App:** Experience it here:
+- [On Azure](bangalorehomepricepredict.azurewebsites.net)
+- [On Render](https://homepriceprediction-9rub.onrender.com/)
 
 **Skills at Play:**
 - **Web Development:** Crafted with HTML, CSS, and JS for a sleek user interface.
